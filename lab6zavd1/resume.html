@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Резюме</title>
+</head>
+
+<body>
+    <h1>Персональна анкета студента</h1>
+    <img src="https://loremflickr.com/320/240/" />
+    <h2>Дані про особу:</h2>
+    <ul>
+        <li><u>Прізвище: Романчук</u></li>
+        <li><u>Ім'я: Сергій</u></li>
+        <li><u>По-батькові: Володимирович</u></li>
+        <li><u>Дата народження: 17.02.1998</u></li>
+    </ul>
+    <h2>Дані про освіту:</h2>
+    <ul>
+        <li>ХНУ, ФПКТС, ІПЗ-17-1</li>
+        <li>ЗОШ №25 м. Хмельницький</li>
+    </ul>
+    <h2>Професійні навички:</h2>
+    <ol>
+        <li>
+            Загальний рівень володіння комп'ютером: <u><i>Високий</i></u>
+        </li>
+        <li>
+            Перелік офісних програм: пакет Microsoft Office(Word, Excel, Access, Powerpoint), середовища для програмування: Microsoft Visual Studio, IntelliJ IDEA, PyCharm, Sublime Text 3, Eclipse
+        </li>
+        <li>
+            Мови програмування: <u><i>Java, C#</i></u>
+        </li>
+    </ol>
+    <h2>Контактна інформація:</h2>
+    <p>
+        Електронна адреса: <u><b>sergey.romanchuk27@gmail.com</b></u>
+    </p>
+    <p>Мобільний телефон: <strong>+380936179228</strong></p>
+    <p>
+        <a href="https://t.me/NEwR1AtL"><img src="tg.jpg" width="50" height="50" alt="Приклад" /></a>
+    </p>
+    <form class="formInformation" id="form_id" method="post" action="">
+        <h3>
+            <p>Ім'я: <input type="text" id="name" name="name" /></p>
+            <p>Електронна пошта: <input type="text" id="email" name="email" /></p>
+            <p>Телефон: <input type="text" id="phone" name="phone" /></p>
+            <p>
+                <textarea name="massage" rows="3" cols="45" id="textLenght">
+Текст повідомлення</textarea
+          >
+        </p>
+        <div class="tables">
+          <a href="tables.html" target="_blank">Таблиці...</a>
+        </div>
+      </h3>
+    </form>
+    <br />
+    <p>
+      Довжина тексту:
+    </p>
+    <p id="outputLenght"></p>
+
+    <button type="button" onclick="return onClick()">Довжина тексту</button>
+    <br />
+    <br />
+    <input
+      type="button"
+      value="Check email"
+      onclick="validate('form_id','email');"
+    />
+    <input
+      type="button"
+      value="Check phone"
+      onclick="phonenumber('form_id','phone')"
+    />
+    <script>
+      const nameField = document.getElementById("name");
+      const emailField = document.getElementById("email");
+      const phoneField = document.getElementById("phone");
+
+      function onClick() {
+        var input = document.getElementById("textLenght").value;
+        document.getElementById("outputLenght").innerHTML = input.length;
+      }
+
+      nameField.addEventListener("input", function (event) {
+        const pattern = "/|,?_&^%$#!*()+=-1234567890-=~`ыё.";
+        if (pattern.includes(event.data)) {
+          event.target.value = event.target.value.substr(
+            0,
+            event.target.value.length - 1
+          );
+        }
+      });
+
+      function validate(form_id, email) {
+        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        var address = document.forms[form_id].elements[email].value;
+
+        if (reg.test(address) == false) {
+          alert("Введіть коректний e-mail");
+          return false;
+        }
+        emailField.value = "";
+      }
+
+      function phonenumber(form_id, phone) {
+        var phoneno = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+        var address = document.forms[form_id].elements[phone].value;
+
+        if (phoneno.test(address) == false) {
+          alert(
+            "Валідні способи: (123) 456-7890 (123)456-7890 123-456-7890 123.456.7890 1234567890 +31636363634 +31636363634"
+          );
+          return false;
+        }
+
+        phoneField.value = "";
+      }
+    </script>
+  </body>
+</html>

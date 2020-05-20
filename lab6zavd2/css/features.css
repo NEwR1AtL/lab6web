@@ -1,0 +1,167 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+body {
+  font-family: Arial;
+  margin: 0;
+}
+.dropbtn {
+  background-color: #6d6eb1;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  box-sizing: border-box;
+  flex: 1%;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #49559d;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+/* Header/logo Title */
+.header {
+  padding: 10px;
+  text-align: center;
+  background: #2846a8;
+  color: #7181b6;
+}
+    
+
+/* Style the top navigation bar */
+.navbar {
+  display: flex;
+  background-color: #333;
+  justify-content: left;
+}
+
+/* Style the navigation bar links */
+.navbar a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* Change color on hover */
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.selected {
+  background-color: #ddd;
+  color: black !important; 
+}
+
+/* Column container */
+.row {  
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side {
+  flex: 1%;
+  background-color: #6d6eb1;
+  padding: 20px;
+  height: 1400px;
+}
+
+.side h3 {
+    display: flex;
+    justify-content: left;
+    color: #def1ff;
+}
+
+.side a:link{
+  color:  #def1ff;
+}
+.side a:hover{
+  color:  #ddf1fa;
+}
+.side a:visited{
+  color: #9daefe;
+}
+
+.side ol li a {
+    text-decoration: none;
+}
+
+.side ol li {
+    padding: 5px 0;
+}
+
+/* Main column */
+.main {
+  font-size: 20px;
+  flex: 70%;
+  background-color: white;
+  padding: 20px;
+}
+
+.historyContentSecondPart ul li {
+    margin-top: 10px;
+    margin-left: 20px;
+    font-size: 20px;
+    list-style-type: none;
+}
+
+/* Fake image, just for this example */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Footer */
+.footer {
+  padding: 10px;
+  text-align: center;
+  background: #c2dfff;
+}
+
+.footerContainer a {
+    font-size: 20px;
+    padding: 10px;
+    background: #49569c;
+    color: white;
+    text-decoration: none;
+}
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row, .navbar, .navbar1 {   
+    flex-direction: column;
+  }
+}

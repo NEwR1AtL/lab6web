@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/syntax.css" rel='stylesheet' type='text/css'>
+    <script src="./js/menu.js"></script>
+</head>
+<body onload="onLoad()">
+
+<div class="dropdown">
+  <button onclick="buttonClick()" class="dropbtn">Меню</button>
+  <div id="myDropdown" class="dropdown-content">
+  <a href="index.html">Скорочена довідка</a>
+  <a href="history.html">Історія</a>
+  <a href="features.html">Особливості</a>
+  <a href="syntax.html">Синтаксис</a>
+  <a href="rating.html">Недоліки</a>
+  </div>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h3>Довідка</h3>
+            <li><a href="syntax.html#version">Теги PHP</a></li>
+  </div>
+  <div class="main">
+      <h1>PHP</h1>
+                <h2 class="hTeg" id="version">Теги PHP</h2>
+                <hr>
+                <div class="historyContentSecondPart">
+                    <p>Коли PHP опрацьовує файл, він шукає відкриваючі та закриваючі теги, такі як <?php і ?>, які вказують PHP, коли починати та закінчувати обробку коду між ними. Подібний спосіб обробки дозволяє PHP внедрятись в усі види різноманітних документів, так как усе, що знаходится поза парою відкриваючих та закриваючих тегів, буде проігноровано парсером PHP.</p>
+
+                    <p>PHP включає в себе короткий echo-тег <?=, який є скороченням для більш багатослівного <?php echo.</p>
+
+                    <p>PHP також допускає короткий відкриваючий тег <?, однак використовувати їх небажано, так як вони доступні тільки якщо увімкнені за допомогою конфігураціонної директивиы php.ini short_open_tag, або якщо PHP був сконфігурований з опцією --enable-short-tags .</p>
+
+                    <p>Якщо файл міститься лише у коді PHP, рекомендується залишити закриваючий тег у файлі. Це допоможе уникнути додавання випадкових символів пробілу або переходу строки після закриття тегу PHP, які можуть бути причиною небажаних ефектів, так як PHP починає вводити дані в буфер при відсутності намірів у програміста виводити які-небудь дані у цій точці скрипта.</p>
+                </div>               
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footerContainer">
+    <h2>Відомості про автора</h2>
+    <span>Лабораторна робота розроблена: <a href="C:\Users\N9\Desktop\3 курс 2 семестр\WEB-програмування\Lab3\resume.html">Романчук Сергій ІПЗ-17-1</a>
+      <br>
+    <p id="phraseOfDay"></p>
+    </span>
+
+</body>
+</html>

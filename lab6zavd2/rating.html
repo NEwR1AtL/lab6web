@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./css/rating.css" rel='stylesheet' type='text/css'>
+   <script src="./js/menu.js"></script>
+</head>
+<body onload="onLoad()">
+
+<!-- Note -->
+
+
+<!-- Header -->
+
+<!-- Navigation Bar -->
+<div class="dropdown">
+  <button onclick="buttonClick()" class="dropbtn">Меню</button>
+  <div id="myDropdown" class="dropdown-content">
+  <a href="index.html">Скорочена довідка</a>
+  <a href="history.html">Історія</a>
+  <a href="features.html">Особливості</a>
+  <a href="syntax.html">Синтаксис</a>
+  <a href="rating.html">Недоліки</a>
+  </div>
+</div>
+
+<!-- The flexible grid (content) -->
+<div class="row">
+  <div class="side">
+    <h3>Довідка</h3>
+            <li><a href="rating.html#version">Недоліки мови PHP</a></li>
+  </div>
+  <div class="main">
+      <h1>PHP</h1>
+                <h2 class="hTeg" id="version">Недоліки мови PHP</h2>
+                <hr>
+                <div class="historyContentSecondPart">
+                    <ol>
+                            <li>Незручність дизайну мови</li>
+                            <li>Змінні з символом <i>$</i></li>
+                            <li>Складні назви поширених функцій (html_entity_decode, Шаблон:Php, nl2br тощо)</li>
+                            <li>Не підтримується Unicode у версіях до 6.0</li>
+                            <li>Непередбачуваність нових версій PHP.</li>
+                        </ol>
+                </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<div class="footer">
+  <div class="footerContainer">
+    <h2>Відомості про автора</h2>
+    <span>Лабораторна робота розроблена: <a href="C:\Users\N9\Desktop\3 курс 2 семестр\WEB-програмування\Lab3\resume.html">Романчук Сергій ІПЗ-17-1</a>
+      <br>
+    <p id="phraseOfDay"></p>
+    </span>
+
+</body>
+</html>
